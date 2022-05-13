@@ -1,0 +1,196 @@
+:root{
+     /* ### Primary */
+  --primary-gradient-1: hsl(6, 100%, 80%);
+  --primary-gradient-2: hsl(335, 100%, 65%);
+
+  /* ### Neutral */
+  --neutral-pale-blue: hsl(243, 100%, 93%);
+  --neutral-grayish-blue: hsl(229, 7%, 55%);
+  --neutral-dark-blue: hsl(228, 56%, 26%);
+  --neutral-very-dark-blue: hsl(229, 57%, 11%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* For mobile screen */
+/* @media (max-width: 375px) { */
+    body{
+        font-family: 'Raleway', sans-serif;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 16px;
+    }
+    .card{
+         background-color: var(--neutral-dark-blue);
+         width: 86%;
+         border-radius: .6rem;
+    }
+    .card-logo{
+        padding: 29px 37px 35px 37px  ;
+        border-top-right-radius: 6rem;
+    }
+    .card-storage{
+        padding: 30px 30px 50px;
+        position: relative;
+    }
+    .logo{
+        margin-top: 8px;
+    }
+    .h1-box{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 30px ;
+    }
+    .btn{
+        background-color: var(--neutral-very-dark-blue);
+        padding: 14px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .description{
+        color: var(--neutral-pale-blue);
+        font-size: 14px;
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+    }
+    .h2-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .text{
+        color: var(--neutral-pale-blue);
+        font-size: 11px;
+        font-weight: 700;
+
+    }
+    .progress-bar{
+        width: 100%;
+        background-color: var(--neutral-very-dark-blue);
+        padding: 3px;
+        border-radius: 1rem;
+        margin: 18px 0 10px 0;
+    }
+
+    .progress-bar-color{
+        width: 75%;
+        background-image: linear-gradient(90deg, var(--primary-gradient-1),var(--primary-gradient-2));
+        padding: 1px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 1rem;
+    }
+    .ball{
+        width: 11px;
+        height: 11px;
+        background-color: var(--neutral-pale-blue);
+        border-radius: 1rem;
+    }
+    .floating-msg-container{
+        position: absolute;
+        left: 50%;
+    }
+    .msg{
+        background-color: #fff;
+        padding: 12px 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        position: relative;
+        left: -50%;
+    }
+    .msg>strong{
+        font-size: 40px;
+        color: var(--neutral-very-dark-blue);
+    }
+    .msg>span{
+        color: var(--neutral-grayish-blue);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-left: 8px;
+    }
+    .triangle{
+        display: none;
+    }
+/* } */
+
+/* For Laptop display */
+@media screen and (min-width:1280px) {
+    body{
+        background-image: url("../images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y:bottom ;
+        background-color: var(--neutral-very-dark-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        flex-direction: row;
+        align-items: flex-end;
+        height: fit-content;
+        width: 64%;
+        height: 22.5%;
+        gap: 30px;
+    }
+
+    .description{
+        text-align: left;
+    }
+
+    .card-logo{
+        width: 39%;
+    }
+
+    .card-storage{
+        width: 61%;
+        padding: 38px 42px;
+    }
+    .floating-msg-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        left: unset;
+        right: 2.5rem;
+        top: -28%;
+    }
+    .msg{
+        border-bottom-right-radius: 0;
+        left: 0;
+    }
+    .triangle{
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 10px solid white;
+        border-right:10px solid white ;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+}
